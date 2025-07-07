@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="./calculadora.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Calculadora Simples</title>
+</head>
+<body class="fundo">
+  <div class="container" id="container">
+    <h1>Calculadora Simples</h1>
+    <div class="calculadora">
+      <p id="resultado"></p>
+      <table>
+        <tr>
+          <td><button class="botao" data-action="clean">C</button></td>
+          <td><button class="botao" data-action="back">⌫</button></td>
+          <td><button class="botao" data-value="/">/</button></td>
+          <td><button class="botao" data-value="*">×</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" data-value="7">7</button></td>
+          <td><button class="botao" data-value="8">8</button></td>
+          <td><button class="botao" data-value="9">9</button></td>
+          <td><button class="botao" data-value="-">−</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" data-value="4">4</button></td>
+          <td><button class="botao" data-value="5">5</button></td>
+          <td><button class="botao" data-value="6">6</button></td>
+          <td><button class="botao" data-value="+">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" data-value="1">1</button></td>
+          <td><button class="botao" data-value="2">2</button></td>
+          <td><button class="botao" data-value="3">3</button></td>
+          <td rowspan="2"><button class="botao igual" data-action="calcular">=</button></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button class="botao" data-value="0" style="width: 106px">0</button></td>
+          <td><button class="botao" data-value=".">.</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="btnToggle">
+    <span class="slider"></span>
+  </label>
+</div>
+  </div>
+
+  <script src="./java.js"></script>
+</body>
+</html>

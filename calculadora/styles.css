@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.fundo {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #eab1e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+  padding: 20px;
+}
+
+.calculadora {
+  background-color: #eb93de;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#resultado {
+  width: 100%;
+  min-width: 240px;
+  max-width: 260px;
+  min-height: 50px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px 15px;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+
+table {
+  margin: 0 auto;
+}
+
+.botao {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 1.2rem;
+  color: black;
+  background: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background: #2cdce2;
+}
+
+.igual {
+  height: 106px;
+}
+
+.toggle-container {
+  margin-top: 30px;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  background: none;
+  border: 5px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: left 0.5s;
+}
+
+.btn.active:before {
+  left: 55px;
+}
+.container.active {
+  background: #121212;
+}
+
+.container.active .calculadora {
+  background-color: #1e1e1e;
+}
+
+.container.active #resultado {
+  background-color: #333;
+  color: #fff;
+}
+
+.container.active .botao {
+  background-color: #444;
+  color: #fff;
+}
+
+.container.active .botao:hover {
+  background-color: #666;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 2px solid #fff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #eab1e1;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0a0b0a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
